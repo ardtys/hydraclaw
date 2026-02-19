@@ -29,12 +29,12 @@ export const metadata: Metadata = {
     template: "%s | HydraClaw",
   },
   description:
-    "Ultra-lightweight AI agents that trade, copy, farm, and evolve. <5MB Rust binary. <10ms boot. $10 hardware. Deploy on Solana & Base.",
+    "Ultra-lightweight AI agents that trade, copy, farm, and evolve. <5MB Rust binary. <10ms boot. $10 hardware. Deploy anywhere.",
   keywords: [
     "HydraClaw",
     "AI trading agents",
-    "Solana",
-    "Base",
+    "multi-chain",
+    "edge computing",
     "crypto",
     "lightweight",
     "Rust",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HydraClaw | 5 Heads. 5 Layers. One Protocol.",
     description:
-      "Ultra-lightweight AI agents that trade, copy, farm, and evolve. Deploy on Solana & Base.",
+      "Ultra-lightweight AI agents that trade, copy, farm, and evolve. Deploy anywhere.",
     type: "website",
     locale: "en_US",
     siteName: "HydraClaw",

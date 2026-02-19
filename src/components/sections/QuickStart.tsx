@@ -4,10 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/shared";
 import { CodeBlock } from "@/components/ui";
-import { QUICKSTART_SOLANA, QUICKSTART_BASE } from "@/lib/constants";
+import { QUICKSTART_SNIPER, QUICKSTART_COPYTRADE } from "@/lib/constants";
 
 export function QuickStart() {
-  const [activeChain, setActiveChain] = useState<"solana" | "base">("solana");
+  const [activeStrategy, setActiveStrategy] = useState<"sniper" | "copytrade">("sniper");
 
   return (
     <SectionWrapper id="docs">
@@ -51,30 +51,30 @@ export function QuickStart() {
       >
         <div className="inline-flex rounded-lg border border-hydra-border bg-hydra-bg-card/50 p-1">
           <button
-            onClick={() => setActiveChain("solana")}
+            onClick={() => setActiveStrategy("sniper")}
             className={`
               px-4 py-2 rounded-md text-sm font-medium transition-all duration-200
               ${
-                activeChain === "solana"
+                activeStrategy === "sniper"
+                  ? "bg-web4 text-white shadow-md"
+                  : "text-hydra-text-muted hover:text-hydra-text"
+              }
+            `}
+          >
+            Sniper
+          </button>
+          <button
+            onClick={() => setActiveStrategy("copytrade")}
+            className={`
+              px-4 py-2 rounded-md text-sm font-medium transition-all duration-200
+              ${
+                activeStrategy === "copytrade"
                   ? "bg-web2 text-white shadow-md"
                   : "text-hydra-text-muted hover:text-hydra-text"
               }
             `}
           >
-            Solana
-          </button>
-          <button
-            onClick={() => setActiveChain("base")}
-            className={`
-              px-4 py-2 rounded-md text-sm font-medium transition-all duration-200
-              ${
-                activeChain === "base"
-                  ? "bg-web1 text-white shadow-md"
-                  : "text-hydra-text-muted hover:text-hydra-text"
-              }
-            `}
-          >
-            Base
+            Copy-Trade
           </button>
         </div>
       </motion.div>
@@ -88,7 +88,7 @@ export function QuickStart() {
         className="max-w-4xl mx-auto"
       >
         <CodeBlock
-          code={activeChain === "solana" ? QUICKSTART_SOLANA : QUICKSTART_BASE}
+          code={activeStrategy === "sniper" ? QUICKSTART_SNIPER : QUICKSTART_COPYTRADE}
           language="bash"
         />
       </motion.div>

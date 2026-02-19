@@ -48,15 +48,14 @@ export default function TokenPage() {
               <span className="text-4xl font-bold text-hydra-bg">H</span>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Badge variant="web2" glow>Solana</Badge>
-              <Badge variant="web1">Base</Badge>
+              <Badge variant="web4" glow>Protocol Token</Badge>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="amber" size="lg" glow>
-                Buy on pump.fun
+                Buy $HYDRA
               </Button>
               <Button variant="outline" size="lg">
-                Buy on bags.fm
+                View Chart
               </Button>
             </div>
           </motion.div>
@@ -392,72 +391,39 @@ export default function TokenPage() {
             How to Buy $HYDRA
           </h2>
           <p className="text-lg text-hydra-text-muted max-w-3xl mx-auto">
-            Step-by-step guide to buying $HYDRA on Solana and Base
+            Simple steps to acquire $HYDRA tokens
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Solana */}
+        <div className="max-w-2xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-web2/30 bg-hydra-bg-card/50 p-8"
+            className="rounded-2xl border border-web4/30 bg-hydra-bg-card/50 p-8"
           >
-            <Badge variant="web2" glow>Solana</Badge>
+            <Badge variant="web4" glow>Get Started</Badge>
             <h3 className="text-2xl font-bold font-[family-name:var(--font-syne)] text-hydra-text mt-4 mb-6">
-              Buy on pump.fun
+              Buy $HYDRA
             </h3>
             <div className="space-y-4">
               {[
-                "Install Phantom or Solflare wallet",
-                "Transfer SOL to your wallet",
-                "Visit pump.fun/hydraclaw",
-                "Connect wallet and set SOL amount",
+                "Install a compatible Web3 wallet",
+                "Fund your wallet with cryptocurrency",
+                "Visit the official HydraClaw exchange",
+                "Connect wallet and set purchase amount",
                 "Confirm transaction and receive $HYDRA",
               ].map((step, idx) => (
                 <div key={idx} className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-web2/20 flex items-center justify-center">
-                    <span className="text-sm font-mono font-semibold text-web2">{idx + 1}</span>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-web4/20 flex items-center justify-center">
+                    <span className="text-sm font-mono font-semibold text-web4">{idx + 1}</span>
                   </span>
                   <p className="text-hydra-text-muted pt-1">{step}</p>
                 </div>
               ))}
             </div>
-            <Button variant="amber" size="lg" className="w-full mt-8">
-              Go to pump.fun
-            </Button>
-          </motion.div>
-
-          {/* Base */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-2xl border border-web1/30 bg-hydra-bg-card/50 p-8"
-          >
-            <Badge variant="web1" glow>Base</Badge>
-            <h3 className="text-2xl font-bold font-[family-name:var(--font-syne)] text-hydra-text mt-4 mb-6">
-              Buy on bags.fm
-            </h3>
-            <div className="space-y-4">
-              {[
-                "Install MetaMask or Coinbase Wallet",
-                "Bridge ETH to Base network",
-                "Visit bags.fm/hydraclaw",
-                "Connect wallet and approve transaction",
-                "Swap ETH for $HYDRA",
-              ].map((step, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-web1/20 flex items-center justify-center">
-                    <span className="text-sm font-mono font-semibold text-web1">{idx + 1}</span>
-                  </span>
-                  <p className="text-hydra-text-muted pt-1">{step}</p>
-                </div>
-              ))}
-            </div>
-            <Button variant="outline" size="lg" className="w-full mt-8">
-              Go to bags.fm
+            <Button variant="primary" size="lg" glow className="w-full mt-8">
+              Buy $HYDRA Now
             </Button>
           </motion.div>
         </div>

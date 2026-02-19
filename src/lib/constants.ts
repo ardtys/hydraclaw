@@ -11,16 +11,16 @@ export const STATS = [
   { value: 5, suffix: "MB", label: "Binary Size", prefix: "<" },
   { value: 8, suffix: "MB", label: "RAM Usage", prefix: "<" },
   { value: 10, suffix: "", label: "Hardware Cost", prefix: "$" },
-  { value: 2, suffix: "", label: "Chains", prefix: "" },
+  { value: 6, suffix: "+", label: "Agent Types", prefix: "" },
 ] as const;
 
 export const TERMINAL_LINES = [
-  { text: "$ hydraclaw init --chain solana", delay: 0 },
+  { text: "$ hydraclaw init --strategy sniper", delay: 0 },
   { text: "✓ Binary size: 3.4MB", delay: 800 },
   { text: "✓ Boot time: 8ms", delay: 1200 },
   { text: "✓ RAM usage: 4.2MB", delay: 1600 },
   { text: "✓ Agent swarm: 5 heads active", delay: 2000 },
-  { text: "✓ Connected to Solana mainnet", delay: 2400 },
+  { text: "✓ Connected to mainnet", delay: 2400 },
   { text: "", delay: 2800 },
   { text: "Ready to hunt. 🐙", delay: 3000 },
 ] as const;
@@ -112,7 +112,7 @@ export const LAYERS = [
     details: [
       "Social login: Google, Twitter, Discord, or email — no wallet extension needed",
       "Embedded wallet: non-custodial wallet created automatically, private key encrypted and stored securely",
-      "Fiat on-ramp: buy $HYDRA or SOL directly with credit/debit card via MoonPay",
+      "Fiat on-ramp: buy $HYDRA directly with credit/debit card via integrated payment providers",
       "Gasless transactions: users don't need to hold native tokens for gas, protocol sponsors via Gelato Relay",
       "Account abstraction (ERC-4337): smart accounts with recovery options and session keys",
     ],
@@ -136,7 +136,7 @@ export const LAYERS = [
       "Agent marketplace currency: buy/sell agent strategies using $HYDRA",
       "Staking rewards: additional APY for those who lock $HYDRA for specific periods",
     ],
-    stack: ["Anchor/Solidity", "Metaplex", "Jito", "Helius RPC"],
+    stack: ["Smart Contracts", "Token Standards", "MEV Protection", "Premium RPC"],
     audience: "Degens & Token Holders",
     audienceDetail: "Crypto natives familiar with DeFi mechanics, investors seeking yield opportunities, and community members wanting to participate in governance.",
     revenue: "Protocol Fees + Token Appreciation",
@@ -191,7 +191,7 @@ export const USER_JOURNEY = [
     step: 3,
     title: "Bridge In",
     shortDesc: "Auto-created wallet, buy crypto with card",
-    description: "When users click 'Start Trading', an embedded wallet is automatically created in the background. Users can immediately buy $HYDRA or SOL using a credit/debit card. No need to download MetaMask or save seed phrases — everything is handled securely by the protocol.",
+    description: "When users click 'Start Trading', an embedded wallet is automatically created in the background. Users can immediately buy $HYDRA using a credit/debit card. No need to download wallet extensions or save seed phrases — everything is handled securely by the protocol.",
     color: "web25",
   },
   {
@@ -332,7 +332,7 @@ export const TOKENOMICS = [
     label: "Community Launch",
     percentage: 40,
     color: "web4",
-    detail: "Fair launch via pump.fun (Solana) and bags.fm (Base). No presale, no VC allocation. 100% community-driven from day one."
+    detail: "Fair launch via decentralized launchpad. No presale, no VC allocation. 100% community-driven from day one."
   },
   {
     label: "Agent Rewards Pool",
@@ -360,11 +360,11 @@ export const TOKENOMICS = [
   },
 ] as const;
 
-export const QUICKSTART_SOLANA = `# Install HydraClaw CLI
+export const QUICKSTART_SNIPER = `# Install HydraClaw CLI
 curl -sSf https://hydraclaw.sh/install | sh
 
 # Initialize agent
-hydraclaw init --chain solana --strategy sniper
+hydraclaw init --strategy sniper
 
 # Configure (edit hydra.toml)
 cat hydra.toml
@@ -372,11 +372,10 @@ cat hydra.toml
 # name = "alpha-hunter"
 # strategy = "sentiment-sniper"
 # risk_level = "medium"
-# max_position = "0.5 SOL"
+# max_position = "500 USDC"
 #
-# [chain]
-# network = "solana-mainnet"
-# rpc = "https://rpc.helius.xyz"
+# [network]
+# rpc = "https://rpc.hydraclaw.io"
 
 # Deploy
 hydraclaw deploy
@@ -385,15 +384,14 @@ hydraclaw deploy
 # 🐙 HydraClaw Agent deployed!
 # ├── Binary: 3.4MB
 # ├── Boot: 8ms
-# ├── Chain: Solana Mainnet
 # ├── Strategy: sentiment-sniper
 # └── Status: HUNTING`;
 
-export const QUICKSTART_BASE = `# Install HydraClaw CLI
+export const QUICKSTART_COPYTRADE = `# Install HydraClaw CLI
 curl -sSf https://hydraclaw.sh/install | sh
 
 # Initialize agent
-hydraclaw init --chain base --strategy copy-trade
+hydraclaw init --strategy copy-trade
 
 # Configure (edit hydra.toml)
 cat hydra.toml
@@ -403,9 +401,8 @@ cat hydra.toml
 # target_wallet = "0x..."
 # risk_factor = 0.5
 #
-# [chain]
-# network = "base-mainnet"
-# rpc = "https://mainnet.base.org"
+# [network]
+# rpc = "https://rpc.hydraclaw.io"
 
 # Deploy
 hydraclaw deploy
@@ -414,7 +411,6 @@ hydraclaw deploy
 # 🐙 HydraClaw Agent deployed!
 # ├── Binary: 3.6MB
 # ├── Boot: 9ms
-# ├── Chain: Base Mainnet
 # ├── Strategy: copy-trade
 # └── Status: MIRRORING`;
 
@@ -432,7 +428,7 @@ export const AGENTS = [
     ],
     status: "live",
     riskLevel: "High",
-    minCapital: "0.1 SOL",
+    minCapital: "$50",
   },
   {
     name: "Copy-Trade Agent",
@@ -447,7 +443,7 @@ export const AGENTS = [
     ],
     status: "live",
     riskLevel: "Medium",
-    minCapital: "1 SOL",
+    minCapital: "$500",
   },
   {
     name: "Airdrop Farmer",
@@ -462,7 +458,7 @@ export const AGENTS = [
     ],
     status: "coming",
     riskLevel: "Low",
-    minCapital: "0.5 SOL",
+    minCapital: "$250",
   },
   {
     name: "DCA Agent",
@@ -477,14 +473,14 @@ export const AGENTS = [
     ],
     status: "coming",
     riskLevel: "Low",
-    minCapital: "0.1 SOL",
+    minCapital: "$50",
   },
   {
     name: "Arbitrage Agent",
     tagline: "Cross-DEX arbitrage, automated.",
     description: "Identify and exploit price differences between DEXs. Monitors multiple pools simultaneously and executes atomic arbitrage trades when profitable opportunities arise.",
     features: [
-      "Monitors 10+ DEXs on Solana and Base",
+      "Monitors 10+ DEXs across multiple chains",
       "Sub-millisecond opportunity detection",
       "Flash loan integration for capital efficiency",
       "MEV protection via private mempools",
@@ -492,7 +488,7 @@ export const AGENTS = [
     ],
     status: "coming",
     riskLevel: "Medium",
-    minCapital: "5 SOL",
+    minCapital: "$2,500",
   },
   {
     name: "Swarm Commander",
@@ -507,7 +503,7 @@ export const AGENTS = [
     ],
     status: "coming",
     riskLevel: "Variable",
-    minCapital: "10 SOL",
+    minCapital: "$5,000",
   },
 ] as const;
 
@@ -517,7 +513,7 @@ export const ROADMAP = [
     phase: "Genesis",
     description: "Foundation phase. Launch token, release core CLI tools, and establish community.",
     items: [
-      "Token launch on pump.fun (Solana) and bags.fm (Base)",
+      "Token launch via decentralized launchpad",
       "HydraClaw CLI v1.0 release",
       "Documentation site live",
       "Sniper and Copy-Trade agents",
@@ -545,7 +541,7 @@ export const ROADMAP = [
     items: [
       "Agent marketplace launch",
       "Agent-to-agent mesh network",
-      "Base mainnet deployment",
+      "Multi-chain deployment",
       "Swarm Commander release",
       "API for third-party integrations",
     ],
@@ -586,10 +582,10 @@ export const FOOTER_LINKS = {
     { label: "Telegram", href: "https://t.me/hydraclaw" },
   ],
   token: [
-    { label: "Buy on pump.fun", href: "#pump" },
-    { label: "Buy on bags.fm", href: "#bags" },
+    { label: "Buy $HYDRA", href: "#buy" },
     { label: "CoinGecko", href: "#coingecko", badge: "Soon" },
     { label: "DEXScreener", href: "#dexscreener" },
+    { label: "Tokenomics", href: "/token" },
   ],
   legal: [
     { label: "Terms of Service", href: "#terms" },

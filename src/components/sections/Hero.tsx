@@ -28,7 +28,7 @@ export function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-web4 animate-pulse" />
               <span className="text-xs text-hydra-text-muted font-medium">
-                Launching on Solana & Base
+                Multi-Chain Protocol
               </span>
             </motion.div>
 
@@ -46,7 +46,7 @@ export function Hero() {
               Ultra-lightweight AI agents that trade, copy, farm, and evolve.{" "}
               <span className="text-web4">&lt;5MB</span>.{" "}
               <span className="text-web3">&lt;10ms boot</span>.{" "}
-              <span className="text-web25">$10 hardware</span>. Deploy on Solana & Base.
+              <span className="text-web25">$10 hardware</span>. Deploy anywhere.
             </p>
 
             {/* CTAs */}

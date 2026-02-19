@@ -64,17 +64,16 @@ export function TokenSection() {
               </div>
             </div>
 
-            {/* Chain badges */}
+            {/* Token badge */}
             <div className="flex flex-wrap gap-2 mb-6">
-              <Badge variant="web2" glow>Solana</Badge>
-              <Badge variant="web1">Base</Badge>
+              <Badge variant="web4" glow>Protocol Token</Badge>
             </div>
 
             {/* Info grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="p-4 rounded-lg bg-hydra-bg-elevated/50 border border-hydra-border">
-                <p className="text-xs text-hydra-text-dim uppercase tracking-wider mb-1">Launch Platform</p>
-                <p className="text-sm text-hydra-text font-medium">pump.fun / bags.fm</p>
+                <p className="text-xs text-hydra-text-dim uppercase tracking-wider mb-1">Launch</p>
+                <p className="text-sm text-hydra-text font-medium">Fair Launch</p>
               </div>
               <div className="p-4 rounded-lg bg-hydra-bg-elevated/50 border border-hydra-border">
                 <p className="text-xs text-hydra-text-dim uppercase tracking-wider mb-1">Utility</p>
@@ -85,10 +84,10 @@ export function TokenSection() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Button variant="amber" glow className="flex-1">
-                Buy on pump.fun →
+                Buy $HYDRA →
               </Button>
               <Button variant="outline" className="flex-1">
-                Buy on bags.fm →
+                View Chart →
               </Button>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar, Footer } from "@/components/layout";
 import { SectionWrapper } from "@/components/shared";
 import { Badge, Button } from "@/components/ui";
-import { QUICKSTART_SOLANA, QUICKSTART_BASE } from "@/lib/constants";
+import { QUICKSTART_SNIPER, QUICKSTART_COPYTRADE } from "@/lib/constants";
 
 export default function DocsPage() {
   return (
@@ -72,22 +72,22 @@ export default function DocsPage() {
             Quick Start
           </h2>
           <p className="text-lg text-hydra-text-muted max-w-3xl">
-            Deploy your first agent in 5 minutes. Choose the chain you want to use.
+            Deploy your first agent in 5 minutes. Choose your strategy.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Solana Quickstart */}
+          {/* Sniper Quickstart */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-web2/30 bg-hydra-bg-card/50 overflow-hidden"
+            className="rounded-2xl border border-web4/30 bg-hydra-bg-card/50 overflow-hidden"
           >
-            <div className="p-4 bg-web2/10 border-b border-web2/30 flex items-center justify-between">
+            <div className="p-4 bg-web4/10 border-b border-web4/30 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Badge variant="web2" glow>Solana</Badge>
-                <span className="text-sm text-hydra-text-muted">Sniper Strategy</span>
+                <Badge variant="web4" glow>Sniper</Badge>
+                <span className="text-sm text-hydra-text-muted">Fast Entry Strategy</span>
               </div>
               <button className="px-3 py-1 text-xs rounded-md border border-hydra-border bg-hydra-bg-elevated text-hydra-text-muted hover:text-hydra-text transition-colors">
                 Copy
@@ -95,23 +95,23 @@ export default function DocsPage() {
             </div>
             <pre className="p-6 overflow-x-auto text-sm">
               <code className="text-hydra-text-muted font-mono whitespace-pre">
-                {QUICKSTART_SOLANA}
+                {QUICKSTART_SNIPER}
               </code>
             </pre>
           </motion.div>
 
-          {/* Base Quickstart */}
+          {/* Copy-Trade Quickstart */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="rounded-2xl border border-web1/30 bg-hydra-bg-card/50 overflow-hidden"
+            className="rounded-2xl border border-web2/30 bg-hydra-bg-card/50 overflow-hidden"
           >
-            <div className="p-4 bg-web1/10 border-b border-web1/30 flex items-center justify-between">
+            <div className="p-4 bg-web2/10 border-b border-web2/30 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Badge variant="web1" glow>Base</Badge>
-                <span className="text-sm text-hydra-text-muted">Copy-Trade Strategy</span>
+                <Badge variant="web2" glow>Copy-Trade</Badge>
+                <span className="text-sm text-hydra-text-muted">Mirror Strategy</span>
               </div>
               <button className="px-3 py-1 text-xs rounded-md border border-hydra-border bg-hydra-bg-elevated text-hydra-text-muted hover:text-hydra-text transition-colors">
                 Copy
@@ -119,7 +119,7 @@ export default function DocsPage() {
             </div>
             <pre className="p-6 overflow-x-auto text-sm">
               <code className="text-hydra-text-muted font-mono whitespace-pre">
-                {QUICKSTART_BASE}
+                {QUICKSTART_COPYTRADE}
               </code>
             </pre>
           </motion.div>
@@ -296,37 +296,36 @@ enabled = true                     # Enable/disable agent
 
 # Risk Management
 [risk]
-max_position = "0.5 SOL"          # Maximum position size per trade
+max_position = "500 USDC"         # Maximum position size per trade
 stop_loss = 0.15                  # Stop loss percentage (15%)
 take_profit = 2.0                 # Take profit multiplier (2x)
-max_daily_loss = "2 SOL"          # Maximum daily loss limit
+max_daily_loss = "1000 USDC"      # Maximum daily loss limit
 trailing_stop = true              # Enable trailing stop loss
 
 # Sniper-specific settings
 [sniper]
-min_liquidity = "10 SOL"          # Minimum liquidity to enter
+min_liquidity = "5000 USDC"       # Minimum liquidity to enter
 max_mcap = "100000"               # Maximum market cap ($100k)
-buy_amount = "0.1 SOL"            # Buy amount per snipe
+buy_amount = "50 USDC"            # Buy amount per snipe
 slippage = 0.30                   # Slippage tolerance (30%)
-priority_fee = "0.001 SOL"        # Jito tip for fast inclusion
+priority_fee = "auto"             # Priority fee for fast inclusion
 
 # Copy-trade settings
 [copy_trade]
 target_wallets = [                # Wallets to copy
-  "ABC...XYZ",
-  "DEF...UVW"
+  "0xABC...XYZ",
+  "0xDEF...UVW"
 ]
 delay_ms = 500                    # Delay before copying (avoid detection)
-min_trade_size = "0.5 SOL"        # Minimum trade to copy
-max_copy_amount = "1 SOL"         # Maximum amount per copied trade
+min_trade_size = "250 USDC"       # Minimum trade to copy
+max_copy_amount = "500 USDC"      # Maximum amount per copied trade
 
-# Chain Configuration
-[chain]
-network = "solana-mainnet"        # Network: solana-mainnet, base-mainnet
-rpc = "https://rpc.helius.xyz"    # RPC endpoint
-ws = "wss://rpc.helius.xyz"       # WebSocket endpoint
+# Network Configuration
+[network]
+rpc = "https://rpc.hydraclaw.io"  # RPC endpoint
+ws = "wss://rpc.hydraclaw.io"     # WebSocket endpoint
 backup_rpc = [                    # Fallback RPCs
-  "https://api.mainnet-beta.solana.com"
+  "https://backup.hydraclaw.io"
 ]
 
 # Notifications

@@ -180,6 +180,19 @@ export default async function OGImage() {
           <span
             style={{
               padding: "8px 16px",
+              background: "rgba(16, 185, 129, 0.2)",
+              border: "1px solid rgba(16, 185, 129, 0.4)",
+              borderRadius: 20,
+              color: "#34D399",
+              fontSize: 14,
+              fontWeight: 500,
+            }}
+          >
+            Multi-Chain
+          </span>
+          <span
+            style={{
+              padding: "8px 16px",
               background: "rgba(139, 92, 246, 0.2)",
               border: "1px solid rgba(139, 92, 246, 0.4)",
               borderRadius: 20,
@@ -188,20 +201,7 @@ export default async function OGImage() {
               fontWeight: 500,
             }}
           >
-            Solana
-          </span>
-          <span
-            style={{
-              padding: "8px 16px",
-              background: "rgba(59, 130, 246, 0.2)",
-              border: "1px solid rgba(59, 130, 246, 0.4)",
-              borderRadius: 20,
-              color: "#60A5FA",
-              fontSize: 14,
-              fontWeight: 500,
-            }}
-          >
-            Base
+            AI Powered
           </span>
         </div>
       </div>
