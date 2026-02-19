@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="hydraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161B22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#hydraGrad)" stroke-width="4" opacity="0.3"/>
+
+  <!-- Hydra Symbol - 5 pointed claw/head design -->
+  <g transform="translate(256, 256)">
+    <!-- Center core -->
+    <circle cx="0" cy="0" r="40" fill="url(#hydraGrad)"/>
+
+    <!-- 5 Claw/Head extensions representing 5 layers -->
+    <!-- Top head -->
+    <path d="M0,-50 L-20,-120 L0,-180 L20,-120 Z" fill="url(#hydraGrad)"/>
+    <circle cx="0" cy="-180" r="24" fill="url(#hydraGrad)"/>
+
+    <!-- Top-right head -->
+    <path d="M47,-15 L114,-76 L171,-38 L114,-38 Z" fill="url(#hydraGrad)"/>
+    <circle cx="171" cy="-56" r="24" fill="url(#hydraGrad)"/>
+
+    <!-- Bottom-right head -->
+    <path d="M29,40 L71,114 L105,171 L71,114 L29,40" fill="url(#hydraGrad)"/>
+    <path d="M29,40 L95,95 L105,171 L55,120 Z" fill="url(#hydraGrad)"/>
+    <circle cx="105" cy="171" r="24" fill="url(#hydraGrad)"/>
+
+    <!-- Bottom-left head -->
+    <path d="M-29,40 L-95,95 L-105,171 L-55,120 Z" fill="url(#hydraGrad)"/>
+    <circle cx="-105" cy="171" r="24" fill="url(#hydraGrad)"/>
+
+    <!-- Top-left head -->
+    <path d="M-47,-15 L-114,-76 L-171,-38 L-114,-38 Z" fill="url(#hydraGrad)"/>
+    <circle cx="-171" cy="-56" r="24" fill="url(#hydraGrad)"/>
+  </g>
+
+  <!-- Inner highlight -->
+  <circle cx="256" cy="256" r="32" fill="#10B981" opacity="0.8"/>
+  <circle cx="248" cy="248" r="12" fill="#fff" opacity="0.4"/>
+</svg>

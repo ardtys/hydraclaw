@@ -24,7 +24,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "HydraClaw | The Universal Lightweight Agent Protocol",
+  title: {
+    default: "HydraClaw | The Universal Lightweight Agent Protocol",
+    template: "%s | HydraClaw",
+  },
   description:
     "Ultra-lightweight AI agents that trade, copy, farm, and evolve. <5MB Rust binary. <10ms boot. $10 hardware. Deploy on Solana & Base.",
   keywords: [
@@ -40,6 +43,9 @@ export const metadata: Metadata = {
     "trading bot",
   ],
   authors: [{ name: "HydraClaw Protocol" }],
+  creator: "HydraClaw Protocol",
+  publisher: "HydraClaw Protocol",
+  metadataBase: new URL("https://hydraclaw.io"),
   openGraph: {
     title: "HydraClaw | 5 Heads. 5 Layers. One Protocol.",
     description:
@@ -47,17 +53,35 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "HydraClaw",
+    url: "https://hydraclaw.io",
   },
   twitter: {
     card: "summary_large_image",
     title: "HydraClaw | The Hydra Doesn't Sleep",
     description:
       "Ultra-lightweight AI agents. <5MB. <10ms boot. Deploy the swarm.",
+    creator: "@hydraclaw",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

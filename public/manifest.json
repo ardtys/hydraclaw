@@ -1,0 +1,23 @@
+{
+  "name": "HydraClaw",
+  "short_name": "HydraClaw",
+  "description": "The Universal Lightweight Agent Protocol - Ultra-lightweight AI agents that trade, copy, farm, and evolve.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1117",
+  "theme_color": "#10B981",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
