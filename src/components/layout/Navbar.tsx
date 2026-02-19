@@ -69,9 +69,11 @@ export function Navbar() {
               <Button variant="amber" size="sm">
                 Buy $HYDRA
               </Button>
-              <Button variant="primary" size="sm" glow>
-                Launch App
-              </Button>
+              <Link href="/demo">
+                <Button variant="primary" size="sm" glow>
+                  Launch App
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -133,9 +135,11 @@ export function Navbar() {
                 <Button variant="amber" size="lg" className="w-full">
                   Buy $HYDRA
                 </Button>
-                <Button variant="primary" size="lg" glow className="w-full">
-                  Launch App
-                </Button>
+                <Link href="/demo" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="primary" size="lg" glow className="w-full">
+                    Launch App
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>

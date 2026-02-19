@@ -484,9 +484,6 @@ rotate = "daily"                  # Log rotation: daily, weekly`}
               Join Discord
             </Button>
             <Button variant="outline" size="lg">
-              GitHub Discussions
-            </Button>
-            <Button variant="outline" size="lg">
               Telegram Group
             </Button>
           </div>

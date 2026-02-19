@@ -38,7 +38,7 @@ export function Community() {
 
       {/* Stats and social grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-        {/* GitHub stats card */}
+        {/* Telegram card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,32 +47,27 @@ export function Community() {
           className="rounded-xl border border-hydra-border bg-hydra-bg-card/50 p-6 hover:border-hydra-border-glow transition-colors duration-300"
         >
           <div className="mb-6">
-            <h3 className="font-semibold text-hydra-text text-lg">GitHub</h3>
-            <p className="text-xs text-hydra-text-muted">Open Source</p>
+            <h3 className="font-semibold text-hydra-text text-lg">Telegram</h3>
+            <p className="text-xs text-hydra-text-muted">Instant Updates</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mb-6">
-            <div className="text-center">
-              <span className="text-2xl font-bold text-hydra-text block">2.4k</span>
-              <span className="text-xs text-hydra-text-muted">Stars</span>
+          <div className="mb-6">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-2 h-2 rounded-full bg-web4 animate-pulse" />
+              <span className="text-sm text-web4">8.3k members</span>
             </div>
-            <div className="text-center">
-              <span className="text-2xl font-bold text-hydra-text block">340</span>
-              <span className="text-xs text-hydra-text-muted">Forks</span>
-            </div>
-            <div className="text-center">
-              <span className="text-2xl font-bold text-hydra-text block">89</span>
-              <span className="text-xs text-hydra-text-muted">Contributors</span>
-            </div>
+            <p className="text-sm text-hydra-text-muted">
+              Get instant alpha, announcements, and connect with the community
+            </p>
           </div>
 
           <a
-            href="https://github.com/hydraclaw"
+            href="https://t.me/hydraclaw"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-elevated text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
           >
-            View Repository →
+            Join Telegram →
           </a>
         </motion.div>
 
@@ -155,14 +150,6 @@ export function Community() {
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
         >
           Telegram
-        </a>
-        <a
-          href="https://github.com/hydraclaw"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
-        >
-          GitHub
         </a>
         <a
           href="https://twitter.com/hydraclaw"

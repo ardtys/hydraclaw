@@ -565,16 +565,15 @@ export const ROADMAP = [
 export const SOCIAL_LINKS = [
   { name: "Twitter", href: "https://twitter.com/hydraclaw" },
   { name: "Discord", href: "https://discord.gg/hydraclaw" },
-  { name: "GitHub", href: "https://github.com/hydraclaw" },
   { name: "Telegram", href: "https://t.me/hydraclaw" },
 ] as const;
 
 export const FOOTER_LINKS = {
   protocol: [
-    { label: "Documentation", href: "#docs" },
-    { label: "GitHub", href: "https://github.com/hydraclaw" },
+    { label: "Documentation", href: "/docs" },
     { label: "Whitepaper", href: "#whitepaper" },
     { label: "Audit", href: "#audit", badge: "Soon" },
+    { label: "Demo", href: "/demo" },
   ],
   community: [
     { label: "Discord", href: "https://discord.gg/hydraclaw" },

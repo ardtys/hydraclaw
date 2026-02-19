@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Twitter, MessageCircle, Send } from "lucide-react";
+import { Twitter, MessageCircle, Send } from "lucide-react";
 import { FOOTER_LINKS } from "@/lib/constants";
 import { Badge } from "@/components/ui";
 
 const socialIcons: Record<string, React.ReactNode> = {
   Twitter: <Twitter className="w-5 h-5" />,
-  Github: <Github className="w-5 h-5" />,
   MessageCircle: <MessageCircle className="w-5 h-5" />,
   Send: <Send className="w-5 h-5" />,
 };
@@ -35,7 +34,6 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <SocialLink href="https://twitter.com/hydraclaw" icon={<Twitter className="w-4 h-4" />} label="Twitter" />
               <SocialLink href="https://discord.gg/hydraclaw" icon={<MessageCircle className="w-4 h-4" />} label="Discord" />
-              <SocialLink href="https://github.com/hydraclaw" icon={<Github className="w-4 h-4" />} label="GitHub" />
               <SocialLink href="https://t.me/hydraclaw" icon={<Send className="w-4 h-4" />} label="Telegram" />
             </div>
           </div>
