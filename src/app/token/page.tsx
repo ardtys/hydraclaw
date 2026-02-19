@@ -1,12 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Copy, Check } from "lucide-react";
 import { Navbar, Footer } from "@/components/layout";
 import { SectionWrapper } from "@/components/shared";
 import { Badge, Button } from "@/components/ui";
-import { TOKEN_TIERS, TOKENOMICS } from "@/lib/constants";
+import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS } from "@/lib/constants";
 
 export default function TokenPage() {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = async () => {
+    await navigator.clipboard.writeText(TOKEN_CONTRACT_ADDRESS);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <main className="min-h-screen bg-hydra-bg relative overflow-hidden">
       <div className="noise" />
@@ -47,9 +57,37 @@ export default function TokenPage() {
             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-web3 to-web3/50 flex items-center justify-center mb-8">
               <span className="text-4xl font-bold text-hydra-bg">H</span>
             </div>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               <Badge variant="web4" glow>Protocol Token</Badge>
             </div>
+
+            {/* Contract Address */}
+            <div className="mb-8">
+              <p className="text-xs text-hydra-text-dim uppercase tracking-wider mb-2">Contract Address</p>
+              <button
+                onClick={copyToClipboard}
+                className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-hydra-border bg-hydra-bg-elevated/50 hover:border-web3/50 hover:bg-hydra-bg-elevated transition-all duration-200"
+              >
+                <code className="text-sm font-mono text-web3 break-all">
+                  {TOKEN_CONTRACT_ADDRESS}
+                </code>
+                {copied ? (
+                  <Check className="w-4 h-4 text-web4 flex-shrink-0" />
+                ) : (
+                  <Copy className="w-4 h-4 text-hydra-text-muted group-hover:text-hydra-text flex-shrink-0 transition-colors" />
+                )}
+              </button>
+              {copied && (
+                <motion.p
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-xs text-web4 mt-2"
+                >
+                  Copied to clipboard!
+                </motion.p>
+              )}
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="amber" size="lg" glow>
                 Buy $HYDRA
