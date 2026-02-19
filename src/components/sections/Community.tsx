@@ -36,81 +36,14 @@ export function Community() {
         </motion.p>
       </div>
 
-      {/* Stats and social grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-        {/* Telegram card */}
+      {/* Twitter/X card - centered */}
+      <div className="flex justify-center mb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="rounded-xl border border-hydra-border bg-hydra-bg-card/50 p-6 hover:border-hydra-border-glow transition-colors duration-300"
-        >
-          <div className="mb-6">
-            <h3 className="font-semibold text-hydra-text text-lg">Telegram</h3>
-            <p className="text-xs text-hydra-text-muted">Instant Updates</p>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-web4 animate-pulse" />
-              <span className="text-sm text-web4">8.3k members</span>
-            </div>
-            <p className="text-sm text-hydra-text-muted">
-              Get instant alpha, announcements, and connect with the community
-            </p>
-          </div>
-
-          <a
-            href="https://t.me/hydraclaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-full py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-elevated text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
-          >
-            Join Telegram →
-          </a>
-        </motion.div>
-
-        {/* Discord card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="rounded-xl border border-web2/30 bg-hydra-bg-card/50 p-6 hover:border-web2/50 transition-colors duration-300"
-        >
-          <div className="mb-6">
-            <h3 className="font-semibold text-hydra-text text-lg">Discord</h3>
-            <p className="text-xs text-hydra-text-muted">Chat with the team</p>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-web4 animate-pulse" />
-              <span className="text-sm text-web4">12.5k members online</span>
-            </div>
-            <p className="text-sm text-hydra-text-muted">
-              Join discussions, get support, and connect with other swarm deployers
-            </p>
-          </div>
-
-          <a
-            href="https://discord.gg/hydraclaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-full py-2.5 rounded-lg bg-web2 text-white text-sm font-medium hover:bg-web2/90 transition-colors"
-          >
-            Join Discord →
-          </a>
-        </motion.div>
-
-        {/* Twitter card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="rounded-xl border border-hydra-border bg-hydra-bg-card/50 p-6 hover:border-hydra-border-glow transition-colors duration-300"
+          className="w-full max-w-md rounded-xl border border-hydra-border bg-hydra-bg-card/50 p-6 hover:border-hydra-border-glow transition-colors duration-300"
         >
           <div className="mb-6">
             <h3 className="font-semibold text-hydra-text text-lg">Twitter/X</h3>
@@ -135,37 +68,21 @@ export function Community() {
         </motion.div>
       </div>
 
-      {/* Additional social links */}
+      {/* Single social link */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.4 }}
         className="flex flex-wrap justify-center gap-4"
       >
-        <a
-          href="https://t.me/hydraclaw"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
-        >
-          Telegram
-        </a>
         <a
           href="https://x.com/hydra_claw"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
         >
-          Twitter
-        </a>
-        <a
-          href="https://discord.gg/hydraclaw"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
-        >
-          Discord
+          Twitter/X
         </a>
       </motion.div>
     </SectionWrapper>

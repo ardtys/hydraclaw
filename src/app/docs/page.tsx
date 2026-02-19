@@ -477,15 +477,14 @@ rotate = "daily"                  # Log rotation: daily, weekly`}
             Need More Help?
           </h2>
           <p className="text-lg text-hydra-text-muted mb-8 max-w-2xl mx-auto">
-            Join our community for support, discussions, and the latest updates
+            Follow us for support, discussions, and the latest updates
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="amber" size="lg">
-              Join Discord
-            </Button>
-            <Button variant="outline" size="lg">
-              Telegram Group
-            </Button>
+            <a href="https://x.com/hydra_claw" target="_blank" rel="noopener noreferrer">
+              <Button variant="amber" size="lg">
+                Follow on X
+              </Button>
+            </a>
           </div>
         </motion.div>
       </SectionWrapper>

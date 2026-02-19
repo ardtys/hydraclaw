@@ -6,7 +6,7 @@ import { Copy, Check } from "lucide-react";
 import { Navbar, Footer } from "@/components/layout";
 import { SectionWrapper } from "@/components/shared";
 import { Badge, Button } from "@/components/ui";
-import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS } from "@/lib/constants";
+import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS, BUY_HYDRA_URL } from "@/lib/constants";
 
 export default function TokenPage() {
   const [copied, setCopied] = useState(false);
@@ -89,9 +89,11 @@ export default function TokenPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="amber" size="lg" glow>
-                Buy $HYDRA
-              </Button>
+              <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer">
+                <Button variant="amber" size="lg" glow>
+                  Buy $HYDRA
+                </Button>
+              </a>
               <Button variant="outline" size="lg">
                 View Chart
               </Button>
@@ -460,9 +462,11 @@ export default function TokenPage() {
                 </div>
               ))}
             </div>
-            <Button variant="primary" size="lg" glow className="w-full mt-8">
-              Buy $HYDRA Now
-            </Button>
+            <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer" className="w-full mt-8">
+              <Button variant="primary" size="lg" glow className="w-full">
+                Buy $HYDRA Now
+              </Button>
+            </a>
           </motion.div>
         </div>
       </SectionWrapper>
@@ -483,9 +487,11 @@ export default function TokenPage() {
             powerful AI trading agents.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="amber" size="lg" glow>
-              Buy $HYDRA Now
-            </Button>
+            <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="amber" size="lg" glow>
+                Buy $HYDRA Now
+              </Button>
+            </a>
             <Button variant="outline" size="lg">
               Read Tokenomics Paper
             </Button>

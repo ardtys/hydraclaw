@@ -1,4 +1,5 @@
 export const TOKEN_CONTRACT_ADDRESS = "F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS";
+export const BUY_HYDRA_URL = "https://bags.fm/F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS";
 
 export const NAV_ITEMS = [
   { label: "Protocol", href: "/protocol" },
@@ -566,8 +567,6 @@ export const ROADMAP = [
 
 export const SOCIAL_LINKS = [
   { name: "Twitter", href: "https://x.com/hydra_claw" },
-  { name: "Discord", href: "https://discord.gg/hydraclaw" },
-  { name: "Telegram", href: "https://t.me/hydraclaw" },
 ] as const;
 
 export const FOOTER_LINKS = {
@@ -578,12 +577,10 @@ export const FOOTER_LINKS = {
     { label: "Demo", href: "/demo" },
   ],
   community: [
-    { label: "Discord", href: "https://discord.gg/hydraclaw" },
     { label: "Twitter/X", href: "https://x.com/hydra_claw" },
-    { label: "Telegram", href: "https://t.me/hydraclaw" },
   ],
   token: [
-    { label: "Buy $HYDRA", href: "#" },
+    { label: "Buy $HYDRA", href: "https://bags.fm/F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS" },
     { label: "CoinGecko", href: "#coingecko", badge: "Soon" },
     { label: "DEXScreener", href: "#dexscreener" },
     { label: "Tokenomics", href: "/token" },

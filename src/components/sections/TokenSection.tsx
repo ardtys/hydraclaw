@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 import { SectionWrapper } from "@/components/shared";
 import { Button, Badge } from "@/components/ui";
-import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS } from "@/lib/constants";
+import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS, BUY_HYDRA_URL } from "@/lib/constants";
 
 export function TokenSection() {
   const [copied, setCopied] = useState(false);
@@ -111,9 +111,11 @@ export function TokenSection() {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="amber" glow className="flex-1">
-                Buy $HYDRA →
-              </Button>
+              <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Button variant="amber" glow className="w-full">
+                  Buy $HYDRA →
+                </Button>
+              </a>
               <Button variant="outline" className="flex-1">
                 View Chart →
               </Button>
