@@ -114,7 +114,7 @@ export function Community() {
         >
           <div className="mb-6">
             <h3 className="font-semibold text-hydra-text text-lg">Twitter/X</h3>
-            <p className="text-xs text-hydra-text-muted">@hydraclaw</p>
+            <p className="text-xs text-hydra-text-muted">@hydra_claw</p>
           </div>
 
           <div className="mb-6">
@@ -125,12 +125,12 @@ export function Community() {
           </div>
 
           <a
-            href="https://twitter.com/hydraclaw"
+            href="https://x.com/hydra_claw"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-elevated text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"
           >
-            Follow @hydraclaw →
+            Follow @hydra_claw →
           </a>
         </motion.div>
       </div>
@@ -152,7 +152,7 @@ export function Community() {
           Telegram
         </a>
         <a
-          href="https://twitter.com/hydraclaw"
+          href="https://x.com/hydra_claw"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-card text-sm text-hydra-text-muted hover:text-hydra-text hover:border-hydra-border-glow transition-colors"

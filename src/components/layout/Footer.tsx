@@ -32,7 +32,7 @@ export function Footer() {
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
-              <SocialLink href="https://twitter.com/hydraclaw" icon={<Twitter className="w-4 h-4" />} label="Twitter" />
+              <SocialLink href="https://x.com/hydra_claw" icon={<Twitter className="w-4 h-4" />} label="Twitter" />
               <SocialLink href="https://discord.gg/hydraclaw" icon={<MessageCircle className="w-4 h-4" />} label="Discord" />
               <SocialLink href="https://t.me/hydraclaw" icon={<Send className="w-4 h-4" />} label="Telegram" />
             </div>

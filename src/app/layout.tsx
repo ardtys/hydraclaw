@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "HydraClaw | The Hydra Doesn't Sleep",
     description:
       "Ultra-lightweight AI agents. <5MB. <10ms boot. Deploy the swarm.",
-    creator: "@hydraclaw",
+    creator: "@hydra_claw",
   },
   robots: {
     index: true,

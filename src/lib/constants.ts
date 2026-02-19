@@ -565,7 +565,7 @@ export const ROADMAP = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { name: "Twitter", href: "https://twitter.com/hydraclaw" },
+  { name: "Twitter", href: "https://x.com/hydra_claw" },
   { name: "Discord", href: "https://discord.gg/hydraclaw" },
   { name: "Telegram", href: "https://t.me/hydraclaw" },
 ] as const;
@@ -579,11 +579,11 @@ export const FOOTER_LINKS = {
   ],
   community: [
     { label: "Discord", href: "https://discord.gg/hydraclaw" },
-    { label: "Twitter/X", href: "https://twitter.com/hydraclaw" },
+    { label: "Twitter/X", href: "https://x.com/hydra_claw" },
     { label: "Telegram", href: "https://t.me/hydraclaw" },
   ],
   token: [
-    { label: "Buy $HYDRA", href: "#buy" },
+    { label: "Buy $HYDRA", href: "#" },
     { label: "CoinGecko", href: "#coingecko", badge: "Soon" },
     { label: "DEXScreener", href: "#dexscreener" },
     { label: "Tokenomics", href: "/token" },
