@@ -1,4 +1,4 @@
-export const TOKEN_CONTRACT_ADDRESS = "TBA";
+export const TOKEN_CONTRACT_ADDRESS = "F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS";
 
 export const NAV_ITEMS = [
   { label: "Protocol", href: "/protocol" },
