@@ -1,3 +1,5 @@
+export const TOKEN_CONTRACT_ADDRESS = "7cgxKZkMwN8wVdkVYRoAqgLYECTff1DodKEXSrRwBAGS";
+
 export const NAV_ITEMS = [
   { label: "Protocol", href: "/protocol" },
   { label: "Layers", href: "/layers" },
