@@ -1,6 +1,3 @@
-export const TOKEN_CONTRACT_ADDRESS = "F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS";
-export const BUY_HYDRA_URL = "https://bags.fm/F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS";
-
 export const NAV_ITEMS = [
   { label: "Protocol", href: "/protocol" },
   { label: "Layers", href: "/layers" },
@@ -580,7 +577,6 @@ export const FOOTER_LINKS = {
     { label: "Twitter/X", href: "https://x.com/hydra_claw" },
   ],
   token: [
-    { label: "Buy $HYDRA", href: "https://bags.fm/F3DaXqPfgPdK2DCui2n9ehdWt1gZVvKH2Ed1c7tZBAGS" },
     { label: "CoinGecko", href: "#coingecko", badge: "Soon" },
     { label: "DEXScreener", href: "#dexscreener" },
     { label: "Tokenomics", href: "/token" },

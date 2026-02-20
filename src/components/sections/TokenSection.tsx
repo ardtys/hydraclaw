@@ -1,21 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Copy, Check } from "lucide-react";
 import { SectionWrapper } from "@/components/shared";
 import { Button, Badge } from "@/components/ui";
-import { TOKEN_TIERS, TOKENOMICS, TOKEN_CONTRACT_ADDRESS, BUY_HYDRA_URL } from "@/lib/constants";
+import { TOKEN_TIERS, TOKENOMICS } from "@/lib/constants";
 
 export function TokenSection() {
-  const [copied, setCopied] = useState(false);
-
-  const copyToClipboard = async () => {
-    await navigator.clipboard.writeText(TOKEN_CONTRACT_ADDRESS);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <SectionWrapper id="token">
       {/* Section header */}
@@ -91,31 +81,8 @@ export function TokenSection() {
               </div>
             </div>
 
-            {/* Contract Address */}
-            <div className="mb-6">
-              <p className="text-xs text-hydra-text-dim uppercase tracking-wider mb-2">Contract Address</p>
-              <button
-                onClick={copyToClipboard}
-                className="group w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-lg border border-hydra-border bg-hydra-bg-elevated/50 hover:border-web3/50 transition-all duration-200"
-              >
-                <code className="text-xs font-mono text-web3 truncate">
-                  {TOKEN_CONTRACT_ADDRESS}
-                </code>
-                {copied ? (
-                  <Check className="w-4 h-4 text-web4 flex-shrink-0" />
-                ) : (
-                  <Copy className="w-4 h-4 text-hydra-text-muted group-hover:text-hydra-text flex-shrink-0 transition-colors" />
-                )}
-              </button>
-            </div>
-
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer" className="flex-1">
-                <Button variant="amber" glow className="w-full">
-                  Buy $HYDRA →
-                </Button>
-              </a>
               <Button variant="outline" className="flex-1">
                 View Chart →
               </Button>

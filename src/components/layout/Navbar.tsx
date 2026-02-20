@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui";
-import { NAV_ITEMS, BUY_HYDRA_URL } from "@/lib/constants";
+import { NAV_ITEMS } from "@/lib/constants";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,11 +66,6 @@ export function Navbar() {
 
             {/* Desktop CTAs */}
             <div className="hidden md:flex items-center gap-3">
-              <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer">
-                <Button variant="amber" size="sm">
-                  Buy $HYDRA
-                </Button>
-              </a>
               <Link href="/demo">
                 <Button variant="primary" size="sm" glow>
                   Launch App
@@ -134,11 +129,6 @@ export function Navbar() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3">
-                <a href={BUY_HYDRA_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="amber" size="lg" className="w-full">
-                    Buy $HYDRA
-                  </Button>
-                </a>
                 <Link href="/demo" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="primary" size="lg" glow className="w-full">
                     Launch App
